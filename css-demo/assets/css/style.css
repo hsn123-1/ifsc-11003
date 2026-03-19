@@ -8,9 +8,22 @@ html {
   box-sizing: inherit;
 }
 
+/* -------------- Image Responsiveness ---------------- */
+img {
+  max-width:100%;
+}
+
+
 /* --------------Utility Classes ---------------- */
 
 /* Skip link utility: hidden until focused */
+
+.container 
+{
+  max-width:960px; 
+  width:80vm;
+  margin:20px auto; 
+}
 .visually-hidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -105,4 +118,59 @@ nav.primary ul li a {
 
 nav.primary ul li a:hover {
     background-color:rgba(0,0,0,.8); 
+}
+
+#content h2 
+{
+  color:#3B16B6; 
+  border-bottom:1px solid #000; 
+}
+
+#content p {
+  line-height:1.6; 
+}
+
+#blog 
+{
+  display:flex;
+  flex-direction:row; 
+  justify-content:space-between;
+  gap:20px; 
+}
+
+figure {
+  margin:0; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width:500px) {
+
+  .container {
+    width:95vw; 
+  }
+
+  nav.primary ul {
+  flex-direction:column; 
+  justify-content:space-evenly;
+  gap:20px; 
+  }
+
+nav.primary a {
+  display:block
+}
+
 }
