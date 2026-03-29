@@ -24,6 +24,34 @@ img {
   width:80vm;
   margin:20px auto; 
 }
+
+.img-right 
+{
+  float:right;
+  margin:10px 0 10px 20px;
+  border: 3px solid #000;
+  padding:2px; 
+  max-width:33%; 
+}
+
+.img-left
+{
+  float:left;
+  margin:10px 20 10px 0px;
+  border: 3px solid #000;
+  padding:2px; 
+  max-width:33%; 
+}
+
+.img-center
+{
+  display:block; 
+  margin:20px auto; 
+  border:1px solid #000; 
+  padding: 10px; 
+  max-width:33%; 
+}
+
 .visually-hidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -75,14 +103,14 @@ header.primary {
     background-color:#491BE0;
     color:#ffffff;
     text-align:center;
-    text-shadow: 2px 2px #000000; 
+    text-shadow: 2.2px 2.2px #1A0A50;
     /* T/R/B/L */
-    padding: 40px 40px 40px 40px; 
+    padding: 40px 40px 20px 40px; 
     /* Can also do T/B | L/R */
 }
 
 header.primary a {
-    color:#ffffff;
+    color:#fff;
     text-decoration:none; 
 }
 
@@ -92,44 +120,46 @@ header.primary h1 {
 }
 
 header.primary p.subtitle {
+  font-style:italic; 
   font-size:1.3rem; 
   margin:0;
   letter-spacing:.2px; 
 }
 
 nav.primary ul {
-  padding:0;
+  padding: 10px 0 0 0 ;
   display:flex;
   flex-direction:row; 
-  justify-content:space-evenly;
-  gap:30px; 
+  justify-content:center;
+  gap:100px; 
 }
 
 nav.primary li {
   list-style-type:none;
-  flex:1
 }
 
 nav.primary ul li a {
   background-color:rgba(0,0,0,.4); 
-  padding: 5px 7.5px;
-  border: 2px solid #000;
-  border-radius: 8px; 
-  transition: 0.5s;
+  padding:7px;
+  border: 2px solid #1A0A50;
+  border-radius: 5px; 
+  transition: 0.2s;
 }
 
 nav.primary ul li a:hover {
-    background-color:rgba(0,0,0,.8); 
+    background-color:rgba(0,0,0,.6); 
 }
 
-#content h2 
+#content h2, #practice h2
 {
   color:#3B16B6; 
-  border-bottom:1px solid #000; 
+  padding-bottom: 5px;
+  border-bottom:3.5px solid #1A0A50; 
 }
 
 #content p {
   line-height:1.6; 
+  font-size: 1.1rem;
 }
 
 #blog 
@@ -139,6 +169,17 @@ nav.primary ul li a:hover {
   justify-content:space-between;
   gap:20px; 
   flex-wrap:wrap; 
+  border-top: 2px solid #1A0A50;
+  border-bottom: 2px solid #1A0A50; 
+  margin: 50px auto; 
+  padding-top:0px;
+  padding-bottom:20px; 
+}
+
+#blog h2 {
+  margin-top: 5px;
+  margin-bottom:2px;
+  color: #3B16B6; 
 }
 
 #recent-posts {
@@ -150,9 +191,9 @@ figure {
 }
 
 article.post {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.6);
   padding:10px;
-  font-size: 0.8rem; 
+  font-size: 1rem; 
   flex:1
 }
 
@@ -161,8 +202,56 @@ article.post time article.post figcaption {
   font-size: 0.6rem; 
 }
 
-article.post a {
+article.post a, #practice a {
   color:#250E72
+}
+
+article.post a:hover, practice a:hover {
+  text-decoration:none; 
+}
+
+#practice h3 {
+  border-left: 7.5px solid #000; 
+  padding: 10px 0 10px 10px; 
+}
+
+table {
+  width:100%;
+  border: 1px solid #000; 
+  border-collapse:collapse; 
+}
+
+caption {
+  font-weight:bold; 
+  margin:10px; 
+}
+
+td {
+  border: 1px solid #000; 
+  padding:5px; 
+}
+
+tr td {
+  text-align:right; 
+}
+
+tr td:first-child {
+  text-align:left;
+}
+
+tr:nth-child(odd) {
+  background-color:rgba(0,0,0,.15);
+}
+
+tr:hover {
+  background-color:rgba(0,0,0,.2);
+}
+
+th {
+  background-color: #000; 
+  color: #ffffff; 
+  text-shadow: 2px 2px #000; 
+  PADDING: 10PX; 
 }
 
 aside[aria-label="sidebar"]{
@@ -220,13 +309,18 @@ footer.primary {
   }
 
   nav.primary ul {
-  flex-direction:column; 
-  justify-content:space-evenly;
-  gap:20px; 
+    flex-direction:column; 
+    gap:20px; 
   }
 
-nav.primary a {
-  display:block
-}
+  nav.primary li {
+    flex: none; /* add this */
+  }
+
+  nav.primary a {
+    display:block;
+    max-width:50%; 
+    margin: auto;
+  }
 
 }
